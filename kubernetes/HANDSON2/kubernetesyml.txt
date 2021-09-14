@@ -1,0 +1,9 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS E:\helloworld> kubectl apply -f service1.yaml
+pod/greet-pod configured
+PS E:\helloworld> kubectl port-forward greet-pod 8080:8080
+Forwarding from 127.0.0.1:8080 -> 8080

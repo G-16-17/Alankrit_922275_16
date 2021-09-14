@@ -1,0 +1,32 @@
+PS E:\helloworld> Minikube start
+😄  minikube v1.23.0 on Microsoft Windows 10 Pro 10.0.21996 Build 21996
+✨  Using the docker driver based on existing profile
+
+⛔  Docker Desktop only has 1850MiB available, you may encounter application deployment failures.
+💡  Suggestion:
+
+    1. Open the "Docker Desktop" menu by clicking the Docker icon in the system tray
+    2. Click "Settings"
+    3. Click "Resources"
+    4. Increase "Memory" slider bar to 2.25 GB or higher
+    5. Click "Apply & Restart"
+📘  Documentation: https://docs.docker.com/docker-for-windows/#resources
+
+👍  Starting control plane node minikube in cluster minikube
+🚜  Pulling base image ...
+🔄  Restarting existing docker container for "minikube" ...
+🐳  Preparing Kubernetes v1.22.1 on Docker 20.10.8 ...
+🔎  Verifying Kubernetes components...
+❗  Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 2.2917569s
+💡  Restarting the docker service may improve performance.
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+🌟  Enabled addons: default-storageclass, storage-provisioner
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+PS E:\helloworld> Kubectl run greet-service --image mscc1/helloworldd
+pod/greet-service created
+PS E:\helloworld> Kubectl port-forward greet-service 8080:8080
+error: unable to forward port because pod is not running. Current status=Pending
+PS E:\helloworld> Kubectl port-forward greet-service 8080:8080
+error: unable to forward port because pod is not running. Current status=Pending
+PS E:\helloworld> Kubectl port-forward greet-service 8080:8080
+Forwarding from 127.0.0.1:8080 -> 8080
